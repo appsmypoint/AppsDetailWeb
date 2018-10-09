@@ -56,9 +56,10 @@ class Main extends React.Component {
         console.log("--componentDidMount");
 
         
-        console.log("--" +  window.location.search);
-        const id =  window.location.search.split("=")[1];
-        console.log(id) // "top"
+        //console.log("--" +  window.location.search);
+        //const id =  window.location.search.split("=")[1];
+        const id = localStorage["experienceId"];
+        console.log("--" +  id) // "top"
         const url = "http://35.202.20.44:8080/experience/page/" + id;
         axios.get(url)
         .then(res => {
